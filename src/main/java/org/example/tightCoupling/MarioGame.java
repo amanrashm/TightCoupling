@@ -1,4 +1,4 @@
-package org.example.game;
+package org.example.tightCoupling;
 
 public class MarioGame {
     public void up() {

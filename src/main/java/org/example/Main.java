@@ -1,8 +1,7 @@
 package org.example;
 
-import org.example.game.GameRunner;
-import org.example.game.MarioGame;
-import org.example.game.SuperContra;
+import org.example.tightCoupling.GameRunner;
+import org.example.tightCoupling.SuperContra;
 
 public class Main {
     public static void main(String[] args) {
