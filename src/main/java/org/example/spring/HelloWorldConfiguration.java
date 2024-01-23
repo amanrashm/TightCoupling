@@ -26,12 +26,12 @@ public class HelloWorldConfiguration {
 
     @Bean
     public int age () {
-        return 24;
+        return 25;
     }
 
     @Bean
     public String address () {
-        return "Bihar";
+        return "Baker Street London";
     }
 
 
@@ -43,10 +43,19 @@ public class HelloWorldConfiguration {
     }
     @Bean
     public Person person1 () {
+        // Approach 1: we can create a bean with the help of existing beans.
         var person = new Person(name(), age(), address());// as we already have beans for name, age and address
         // I want to create a new bean relation with existing Spring beans how can I do this ? 1. call the method name() and age() and address()
-        // and pass the return value to the constructor of Person class. 2.
+        // and pass the return value to the constructor of Person class.
+        // what we got to know with this ? 1. we can create a bean with the help of existing beans.
         return person;
+    }
+    @Bean
+    public Person person2(String name, int age, String address){
+        // Instead of calling the method name() and age() and address() we can pass the parameter to the method person2() and Spring will automatically
+        // Approach 2: we can create a bean with the help of existing beans.
+        // We are auto-wiring the beans here.
+        return new Person(name, age, address);
     }
 
     @Bean
