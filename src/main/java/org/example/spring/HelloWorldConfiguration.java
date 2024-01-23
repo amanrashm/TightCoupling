@@ -1,6 +1,8 @@
 package org.example.spring;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Primary;
 // @Configuration annotation is used to mark a class as a source of bean definitions for the application context.
 // @Bean annotation is used to mark a method as a bean definition method.
 // @Bean annotation works with @Configuration annotation.
@@ -58,7 +60,15 @@ public class HelloWorldConfiguration {
         return new Person(name, age, address, address2);
     }
 
+    @Bean
+    @Qualifier("person3")
+    public Person person3(String name, int age, String address, Address address2){
+        // name age address address2 are the beans here.
+        return new Person(name, age, address, address2);
+    }
+
     @Bean(name = "address2")
+    @Primary
     public Address address1 () {
         var address = new Address("Patna", "Bihar", "India");
         return address;

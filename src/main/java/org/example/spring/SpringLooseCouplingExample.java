@@ -1,5 +1,8 @@
 package org.example.spring;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+
+import java.util.Arrays;
+
 public class SpringLooseCouplingExample {
     public static void main(String... args) throws Exception {
         System.out.println("Hello World Spring App!!!");
@@ -82,5 +85,7 @@ Process finished with exit code 0*/
         // To resolve this issue we can use the following code.
         // Address address = context.getBean(Address.class);
         // System.out.println(address);
+        Arrays.stream(context.getBeanDefinitionNames()).forEach(System.out::println);
+        System.out.println(context.getBean("person3"));
     }
 }
