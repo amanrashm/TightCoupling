@@ -14,7 +14,7 @@ import org.springframework.context.annotation.Configuration;
 // record class is a final class.
 // record class is a final class and it can not be extended.
 
-record Person(String name, int age, String address) {}
+record Person(String name, int age, String address, Address address2) {}
 
 record Address(String city, String state, String country) {}
 @Configuration
@@ -38,27 +38,27 @@ public class HelloWorldConfiguration {
     // What is there is relationship between 2 beans?
     @Bean
     public Person person () {
-        var person = new Person("Aman Raj", 24, "Bihar");
+        var person = new Person("Aman Raj", 24, "Bihar", new Address("Patna", "Bihar", "India"));
         return person;
     }
     @Bean
     public Person person1 () {
         // Approach 1: we can create a bean with the help of existing beans.
-        var person = new Person(name(), age(), address());// as we already have beans for name, age and address
+        var person = new Person(name(), age(), address(), address1());// as we already have beans for name, age and address
         // I want to create a new bean relation with existing Spring beans how can I do this ? 1. call the method name() and age() and address()
         // and pass the return value to the constructor of Person class.
         // what we got to know with this ? 1. we can create a bean with the help of existing beans.
         return person;
     }
     @Bean
-    public Person person2(String name, int age, String address){
+    public Person person2(String name, int age, String address, Address address2){
         // Instead of calling the method name() and age() and address() we can pass the parameter to the method person2() and Spring will automatically
         // Approach 2: we can create a bean with the help of existing beans.
         // We are auto-wiring the beans here.
-        return new Person(name, age, address);
+        return new Person(name, age, address, address2);
     }
 
-    @Bean
+    @Bean(name = "address2")
     public Address address1 () {
         var address = new Address("Patna", "Bihar", "India");
         return address;
