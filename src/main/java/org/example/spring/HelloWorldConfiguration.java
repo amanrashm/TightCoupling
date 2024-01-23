@@ -34,11 +34,18 @@ public class HelloWorldConfiguration {
         return "Bihar";
     }
 
+
+    // What is there is relationship between 2 beans?
     @Bean
     public Person person () {
         var person = new Person("Aman Raj", 24, "Bihar");
-        var person1 = new Person("Aman Raj", 25, "Bihar");
-        var person2 = new Person("Aman Raj", 26, "Bihar");
+        return person;
+    }
+    @Bean
+    public Person person1 () {
+        var person = new Person(name(), age(), address());// as we already have beans for name, age and address
+        // I want to create a new bean relation with existing Spring beans how can I do this ? 1. call the method name() and age() and address()
+        // and pass the return value to the constructor of Person class. 2.
         return person;
     }
 

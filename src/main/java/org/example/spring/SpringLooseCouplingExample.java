@@ -14,6 +14,7 @@ public class SpringLooseCouplingExample {
         System.out.println(context.getBean("age"));
         System.out.println(context.getBean("address"));
         System.out.println(context.getBean("person"));
+        System.out.println(context.getBean("person1"));
         // pass the method name as a parameter in getBean() method.
         // All the beans are managed by Spring. and are independent
         System.out.println(context.getBean("address1"));
