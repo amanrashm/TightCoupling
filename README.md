@@ -1,6 +1,5 @@
-Tight Coupling In Java
+# Tight Coupling In Java
 Overview
-Provide a brief introduction to your project, explaining its purpose and key features.
 
 Table of Contents
 Project Name
@@ -16,14 +15,13 @@ License
 Installation
 Provide instructions on how to install and set up the project.
 
-bash
-Copy code
+
 # Example installation commands
 git clone Project Name
 Overview
 Provide a brief introduction to your project, explaining its purpose and key features.
 
-Table of Contents
+# Table of Contents
 Project Name
 Overview
 Table of Contents
@@ -37,10 +35,9 @@ License
 Installation
 Provide instructions on how to install and set up the project.
 
-bash
-Copy code
+
 # Example installation commands
-git clone https://github.com/your-username/your-project.git
+git clone [https://github.com/your-username/your-project.git](https://github.com/amanrashm/TightCoupling/tree/master)
 cd your-project
 mvn install
 Usage
@@ -91,8 +88,8 @@ public class Main {
 Folder Structure
 Briefly describe the organization of your project's folders and files.
 
-lua
-Copy code
+
+
 your-project/
 |-- src/
 |   |-- main/
@@ -103,6 +100,11 @@ your-project/
 |                       |-- ...
 |-- target/
 |-- ...
+
+
+
+
+
 Tight Coupling
 Discuss the concept of tight coupling in your Java project and explain why it can be a problem. Identify areas in your code where tight coupling is present.
 
