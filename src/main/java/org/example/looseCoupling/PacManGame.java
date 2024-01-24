@@ -32,4 +32,9 @@ public class PacManGame implements GameRunner{
     public void right() {
         System.out.println("right");
     }
+
+    @Override
+    public void run() {
+
+    }
 }

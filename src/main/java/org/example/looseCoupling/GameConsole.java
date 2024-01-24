@@ -1,6 +1,6 @@
 package org.example.looseCoupling;
 
-public class GameConsole {
+public interface GameConsole {
     public static void main(String[] args) {
         GameRunner gameRunner = new GameRunner() {
             /**
@@ -73,9 +73,14 @@ public class GameConsole {
                 pacManGame.right();
 
             }
+
+            @Override
+            public void run() {
+
+            }
         };
         gameRunner.run(new MarioGame());
         gameRunner.run(new SuperContra());
         gameRunner.run(new PacManGame());
-    }
+    } 
 }

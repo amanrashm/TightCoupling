@@ -36,4 +36,9 @@ public class MarioGame implements GameRunner {
     public void run(SuperContra superContra) {
 
     }
+
+    @Override
+    public void run() {
+
+    }
 }

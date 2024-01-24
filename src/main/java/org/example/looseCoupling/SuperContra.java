@@ -36,4 +36,9 @@ public class SuperContra implements GameRunner{
     public void run(SuperContra superContra) {
 
     }
+
+    @Override
+    public void run() {
+
+    }
 }

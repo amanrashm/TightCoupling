@@ -18,4 +18,6 @@ public interface GameRunner {
     default void run(PacManGame pacManGame) {
 
     }
+
+    void run();
 }
